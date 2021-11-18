@@ -1,0 +1,44 @@
+.signupbox{
+    width: 40vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    height: 80vh;
+}
+.signuppaper{
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 10vh;
+    height: 80vh;
+    background-color:"#f7d9c4";
+}
+.Title{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.element{
+    height: 10vh;
+    padding: 1vh;
+    position: relative;
+    text-align: center;
+}
+.elementLogin{
+    height: 9vh;
+    padding-top: 2vh;
+    padding-bottom: 0.5vh;
+    position: relative;
+    text-align: center;
+    
+}
+.elementSignUp{
+    height: 9vh;
+    padding-bottom: 2vh;
+    padding-top: 0.5vh;
+    position: relative;
+    text-align: center;
+}
+.background{
+    /* background-color:#e57373; */
+    padding: 0;
+    height: 100vh;
+    margin: 0;
+}
