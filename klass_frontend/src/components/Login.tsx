@@ -1,11 +1,14 @@
-import { Button, MuiThemeProvider, Paper, TextField } from "@material-ui/core";
-import { createTheme } from "@mui/material/styles";
-import React from "react";
+import { Button,   Paper, TextField } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import './Login.css';
 
 
 
 function Login(){
+    useEffect(()=>{
+        console.log("hello")
+    })
     return(
         <div className="background">
         <Paper elevation={5} className="loginpaper" style={{backgroundColor: "#f7d9c4"}}>
@@ -18,13 +21,17 @@ function Login(){
                     <TextField id="username" label="Username" variant="standard" style={{backgroundColor: "white", width: "25vw"}}/>
                 </div>
                 <div className="element">
-                    <TextField id="password" label="Password" variant="standard" style={{backgroundColor: "white", width: "25vw"}}/>
+                    <TextField id="password" label="Password" variant="standard" type={"password"} style={{backgroundColor: "white", width: "25vw"}}/>
                 </div>
                 <div className="elementLogin">
-                    <Button variant="contained" color="primary">Login</Button>
+                    <Link style={{textDecoration:"none"}} to="/home">
+                        <Button variant="contained" color="primary" size="large">Login</Button>
+                    </Link>
                 </div>
                 <div className="elementSignUp">
-                    <Button variant="contained" color="primary">Sign Up</Button>
+                    <Link style={{textDecoration:"none"}} to="/signup">
+                        <Button variant="contained" color="primary" size ="large">Sign Up</Button>
+                    </Link>
                 </div>
             </div>
         </Paper>

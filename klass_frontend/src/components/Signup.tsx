@@ -1,5 +1,5 @@
-import { Button, MuiThemeProvider, Paper, TextField } from "@material-ui/core";
-import { createTheme } from "@mui/material/styles";
+import { Button,  Paper, TextField} from "@material-ui/core";
+import { Link } from "react-router-dom";
 import React from "react";
 import './Signup.css';
 
@@ -31,7 +31,10 @@ function Signup(){
                 </div>
                 
                 <div className="elementSignUp">
-                    <Button variant="contained" color="primary">Sign Up</Button>
+                    <Link style={{textDecoration:"none"}} to="/home">
+                        <Button variant="contained" color="primary">Sign Up</Button>
+                    </Link>
+                    
                 </div>
             </div>
         </Paper>
