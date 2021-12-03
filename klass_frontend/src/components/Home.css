@@ -1,0 +1,23 @@
+.nav{
+    width: 100%;
+    margin:0%;
+    height: 10vh;
+}
+.navgrid{
+    width: 100%;
+    margin:0%;
+    height: 10vh;
+}
+.elementSettings{
+    margin-top: 3.2%;
+    position: relative;
+    text-align: center;
+}
+.title{
+    margin: auto;
+    height: 5vh;
+    padding-top: 2.5vh;
+    padding-left: 1vw;
+    font-size: larger;
+    font-weight: 600;
+}

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './Home.css';
+import Navbar from "./Navbar";
 import {homeProps} from './interfaces/Props'
 
 function Home(props:homeProps){
@@ -11,6 +12,7 @@ function Home(props:homeProps){
 
     return(
         <div>
+            <Navbar/>
             {families.map((x: any, i: number) => {
                 return(
                     <div key={i}>{x.name}</div>
