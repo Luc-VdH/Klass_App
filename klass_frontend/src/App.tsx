@@ -20,7 +20,7 @@ const theme = createTheme({
 });
 
 function App() {
-  const [username, setCC] = useState("");
+  const [username, setUN] = useState("");
   const [password, setPW] = useState("");
   return (
     <MuiThemeProvider theme={theme}>
@@ -34,7 +34,7 @@ function App() {
             <Home username={username} password={password} />
           </Route>
           <Route exact path="/">
-            <Login />
+            <Login setPW={setPW} setUN={setUN}/>
           </Route>
           
         </Switch>

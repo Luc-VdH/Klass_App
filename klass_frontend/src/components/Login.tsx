@@ -1,11 +1,16 @@
 import { Button,   Paper, TextField } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './Login.css';
+import { loginProps } from "./interfaces/Props";
 
 
 
-function Login(){
+function Login(props: loginProps){
+    const [username, setUN] = useState("")
+    const [password, setPW] = useState("")
+    const [loggedin, setlogin] = useState(false)
+    
     useEffect(()=>{
         console.log("hello")
     })

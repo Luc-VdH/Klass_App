@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import {Paper} from "@material-ui/core";
+import {Button, Paper} from "@material-ui/core";
+import { Grid } from "@mui/material";
 import "./Home.css"
 import {fbProps} from './interfaces/Props'
 
@@ -13,11 +14,24 @@ function FamilyButton(props: fbProps){
 
     return(
         <Paper elevation={4} style={s}>
-            <div style={{paddingLeft: "2vw"}}>
-                <div style={{textAlign: "center", height: "7vh", paddingTop: "2vh", fontSize: "5vh"}}>{name}</div> 
+            <Grid container spacing={2}>
+                <Grid item xs={2}>
+                    <div style={{paddingLeft: "2vw"}}>
+                        <div style={{textAlign: "center", height: "7vh", paddingTop: "2vh", fontSize: "5vh"}}>{name}</div> 
+                        
+                        <div style={{textAlign: "center"}}>Code: {code}</div>
+                    </div>
+                </Grid>
+                <Grid item xs={8.5}>
+                    none
+                </Grid>
+                <Grid item xs={1}>
+                    <div style={{paddingTop: "2.5vh"}}>
+                    <Button variant="contained" color="primary" size="large" >View Details</Button>
+                    </div>
+                </Grid>
                 
-                <div style={{textAlign: "center"}}>Code: {code}</div>
-            </div>
+            </Grid>
         </Paper>
     );
 }

@@ -5,6 +5,7 @@ import FamilyButton from "./FamilyButton";
 import {homeProps} from './interfaces/Props'
 import { Paper } from "@material-ui/core";
 import { Grid } from "@mui/material";
+import NewFamily from "./NewFamily";
 
 function Home(props:homeProps){
     
@@ -33,11 +34,17 @@ function Home(props:homeProps){
                                     <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                         Join Group:
                                     </div>
+                                    <NewFamily actionName="Join" input="Code:" action={() => {
+                                        console.log("Join Group")
+                                    }}></NewFamily>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                         Create Group:
                                     </div>
+                                    <NewFamily actionName="Create" input="Name:" action={() => {
+                                        console.log("New Group")
+                                    }}></NewFamily>
                                 </Grid>
                             </Grid>
                         </div>
@@ -46,10 +53,16 @@ function Home(props:homeProps){
                             <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                 Join Group:
                             </div>
+                            <NewFamily actionName="Join" input="Code:" action={() => {
+                                console.log("Join Group")
+                            }}></NewFamily>
 
                             <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                 Create Group:
                             </div>
+                            <NewFamily actionName="Create" input="Name:" action={() => {
+                                console.log("New Group")
+                            }}></NewFamily>
                         </div>
                     )}
                     
