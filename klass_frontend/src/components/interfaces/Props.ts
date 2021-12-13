@@ -1,21 +1,20 @@
 export interface homeProps {
-    username: string;
-    password: string;
-  }
+  username: string;
+  password: string;
+}
 
-export interface fbProps{
+export interface fbProps {
   name: string;
-  code: string; 
-  isAdd: boolean;
+  code: string;
 }
 
-export interface newFamilyProps{
-  input: string
+export interface newFamilyProps {
+  input: string;
   actionName: string;
-  action:Function
+  action: Function;
 }
 
-export interface loginProps{
+export interface loginProps {
   setUN: React.Dispatch<React.SetStateAction<string>>;
   setPW: React.Dispatch<React.SetStateAction<string>>;
 }

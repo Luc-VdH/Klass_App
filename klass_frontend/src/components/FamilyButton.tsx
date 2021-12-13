@@ -7,7 +7,8 @@ import {fbProps} from './interfaces/Props'
 function FamilyButton(props: fbProps){
     const [name, setName] = useState(props.name);
     const [code, setCode] = useState(props.code);
-    const [isAdd, setAdd] = useState(props.isAdd);
+    const [recipient, setRec] = useState("none")
+    
     
 
     const s = {backgroundColor: "#f7d9c4", height: "15vh", width: "90vw", marginRight: "5vw", marginLeft: "2.5vw", marginTop: "1vh", display: 'flex'}
@@ -23,7 +24,7 @@ function FamilyButton(props: fbProps){
                     </div>
                 </Grid>
                 <Grid item xs={8.5}>
-                    none
+                    <div style={{paddingTop: "6vh"}}>Recipient: {recipient}</div>
                 </Grid>
                 <Grid item xs={1}>
                     <div style={{paddingTop: "2.5vh"}}>

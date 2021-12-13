@@ -34,16 +34,16 @@ function Home(props:homeProps){
                                     <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                         Join Group:
                                     </div>
-                                    <NewFamily actionName="Join" input="Code:" action={() => {
-                                        console.log("Join Group")
+                                    <NewFamily actionName="Join" input="Code:" action={(groupcode:string) => {
+                                        joinFamily(username, password, groupcode);
                                     }}></NewFamily>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                         Create Group:
                                     </div>
-                                    <NewFamily actionName="Create" input="Name:" action={() => {
-                                        console.log("New Group")
+                                    <NewFamily actionName="Create" input="Name:" action={(groupname:string) => {
+                                        createFamily(username, password, groupname)
                                     }}></NewFamily>
                                 </Grid>
                             </Grid>
@@ -53,15 +53,15 @@ function Home(props:homeProps){
                             <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                 Join Group:
                             </div>
-                            <NewFamily actionName="Join" input="Code:" action={() => {
-                                console.log("Join Group")
+                            <NewFamily actionName="Join" input="Code:" action={(groupcode:string) => {
+                                joinFamily(username, password, groupcode);
                             }}></NewFamily>
 
                             <div style={{paddingTop: "1vh", paddingBottom: "1vh", paddingLeft: "1vw", fontSize: "6vh"}}>
                                 Create Group:
                             </div>
-                            <NewFamily actionName="Create" input="Name:" action={() => {
-                                console.log("New Group")
+                            <NewFamily actionName="Create" input="Name:" action={(groupname:string) => {
+                                createFamily(username, password, groupname)
                             }}></NewFamily>
                         </div>
                     )}
@@ -77,7 +77,7 @@ function Home(props:homeProps){
                     </div>
                     {families.map((x: any, i: number) => {
                         return(
-                            <FamilyButton key={i} name={x.name} code={x.code} isAdd={false}></FamilyButton>
+                            <FamilyButton key={i} name={x.name} code={x.code}></FamilyButton>
                         );
                     })}
                 </Paper>
@@ -91,6 +91,13 @@ function Home(props:homeProps){
 
 function getFamilies(username:string, password:string){
     return([{name:"family1", code: "ABCDEF"}, {name:"family2", code: "ABCDEF"}, {name:"family3", code: "ABCDEF"}, {name:"family4", code: "ABCDEF"}, {name:"family4", code: "ABCDEF"}, {name:"family4", code: "ABCDEF"}, {name:"family4", code: "ABCDEF"}]);
+}
+function joinFamily(username: string, password:string, code:string){
+    console.log("join" + code)
+}
+
+function createFamily(username: string, password:string, name:string){
+    console.log("create" + name)
 }
 
 export default Home;
